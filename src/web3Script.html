@@ -1,0 +1,25 @@
+<script src="/js/web3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+	// IF THEY HAVE WEB3
+	if (typeof window.web3 !== 'undefined'){
+		web3 = new Web3(web3.currentProvider);
+		//or 
+		error();
+		//or 
+		//direct to new page;
+	
+	// IF THEY DON'T HAVE WEB3
+	} else{
+		web3 = new Web3(new Web3.providers.HttpProvider("our local host address"));
+	}
+
+	//default account is first account in local host
+	web3.eth.defaultAccount = web3.eth.accounts[0];
+
+	var "ourcontract" = web3.eth.contract(our contract ABI or parameters);
+
+	var name = ourcontract.at({'contract address'})
+
+</script>
